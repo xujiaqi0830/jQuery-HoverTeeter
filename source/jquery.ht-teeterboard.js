@@ -1,4 +1,5 @@
 (function($){
+    "use strict";
     $.fn.extend({
         'addTeeterboard': function(deg, persp){
             var moveDegree = deg || 3;
