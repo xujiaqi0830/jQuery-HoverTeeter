@@ -45,14 +45,14 @@ $(selector).addTeeterboard();
 
 ## 详细
 
-### 1.teeterboard - 跷跷板效果
+### 1.Teeterboard - 跷跷板效果
 - 文件名: jquery.ht-teeterboard.min.js
 
 
 - 效果说明
  - 默认参数实现鼠标悬停下压效果，3D化界面元素
  - 根据距离中心点的距离变化下压角度
- 
+
 - 方法说明
 
 ```javascript
@@ -64,8 +64,31 @@ $(selector).addTeeterboard(deg, persp)
 deg | 是   | Number  | 最大倾斜角度(deg) | 3
 persp|是   | Number  | 景深(px) | 800
 
+### 2.Magneto - 磁力吸附效果
+- 文件名: jquery.ht-magneto.min.js
+
+- 效果说明
+ - 与teeterboard相反，默认参数实现鼠标吸附效果，3D化界面元素
+ - 根据距离中心点的距离变化上扬角度
+
+- 方法说明
+
+```javascript
+$(selector).addMagneto(deg, magforce, persp)
+```
+
+参数 | 可选 | 数据类型 | 说明 | 默认值
+----|------|--------|------|-----
+deg | 是   | Number  | 最大倾斜角度(deg) | 3
+magforce | 是   | Number  | 吸附高度(px) | 25
+persp|是   | Number  | 景深(px) | 800
+
 
 # 更新日志
+
+### v0.5.2 (Fri, 14 Oct 2016 03:36:34 GMT)
+- 增加了磁力吸附ht-magneto效果及说明
+- 优化了
 
 ### v0.5.1 (Thu, 13 Oct 2016 03:26:15 GMT)
 - 定稿了项目名称与计划
