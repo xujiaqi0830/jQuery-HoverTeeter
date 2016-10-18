@@ -25,6 +25,8 @@ jQuery-HoverTeeter
 # 主要工具
 
  - jQuery
+ - HTML5
+ - CSS3
 
 # 使用方法
 
@@ -56,7 +58,7 @@ $(selector).addTeeterboard();
 - 方法说明
 
 ```javascript
-$(selector).addTeeterboard(deg, persp)
+$(selector).addTeeterboard(deg, persp);
 ```
 
 参数 | 可选 | 数据类型 | 说明 | 默认值
@@ -74,7 +76,7 @@ persp|是   | Number  | 景深(px) | 800
 - 方法说明
 
 ```javascript
-$(selector).addMagneto(deg, magforce, persp)
+$(selector).addMagneto(deg, magforce, persp);
 ```
 
 参数 | 可选 | 数据类型 | 说明 | 默认值
@@ -83,8 +85,43 @@ deg | 是   | Number  | 最大倾斜角度(deg) | 3
 magforce | 是   | Number  | 吸附高度(px) | 25
 persp|是   | Number  | 景深(px) | 800
 
+### 3.BorderTracer - 旋转边框动画效果
+- 文件名: jquery.ht-bordertracer.min.js
+
+- 效果说明
+ - 实现鼠标悬停后，线段沿元素边缘顺时针旋转效果
+ - 暂时只适用于无圆角矩形元素
+ - 后续将改进添加效果后，元素原有控件交互上的一些问题
+
+- 方法说明
+
+```javascript
+var json = {
+	color: [String],
+	length: [Number],
+	borderWidth: [Number],
+	pace: [Number],
+	lineCap: [String]
+};
+
+$(selector).addBorderTracer(json);
+
+```
+
+参数 | 可选 | 数据类型 | 说明 | 默认值
+----|------|--------|------|-----
+json.color | 是   | String  | 运动线条颜色 | 'rgb(194, 233, 144)'
+json.length| 是   | Number  | 运动线条长度(px) | 80
+json.borderWidth|是   | Number  | 运动线条宽度(px) | 5
+json.pace | 是 | Number | 运动线条步进距离(px每16毫秒) | 15
+json.lineCap | 是 | String | 运动线条线帽类型('butt'/'round'/'square') | 'round'
+
 
 # 更新日志
+
+### v0.5.3 (Tue, 18 Oct 2016 14:28:32 GMT)
+- 增加了旋转边框ht-bordertracer效果及说明
+
 
 ### v0.5.2 (Fri, 14 Oct 2016 03:36:34 GMT)
 - 增加了磁力吸附ht-magneto效果及说明
